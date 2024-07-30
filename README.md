@@ -9,3 +9,7 @@ Here it comes the funny part, because the procedure I adopted to write this code
 Here you'll find the code I wrote, how to build and install it and many other details. The hardware project is on 
 [esphome-programming-a-very-cheap-power-meter](https://hackaday.io/project/197097-esphome-programming-a-very-cheap-power-meter)
 
+### Code explanation
+
+### Using the External Component
+
