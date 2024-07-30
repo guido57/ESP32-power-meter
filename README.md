@@ -50,7 +50,7 @@ In addition to knowing something about ESPHome, to build this project you need t
 * download this repository in a folder of your choice. Not to mix things, I only suggest you to avoid the directory where you installed the ESPHome Command Line.
   For instance you could install:
   * The ESPHome Command line into /home/you/esphome
-  * Your ESPHome component into /home/you/ESP32-power-meter
+  * This ESPHome component into /home/you/ESP32-power-meter
 
 
 ## Build and install the esphome firmware
