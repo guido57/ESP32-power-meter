@@ -2,7 +2,7 @@
 A cheap AC power meter integrated with ESPhome
 ![](https://cdn.hackaday.io/images/6278781722196728543.png)
 
-### Overview
+# Overview
 For most devices/sensors connected to ESP32/ESP8266, the ESPHome integration is already available. In that case, you only need to write the proper .yaml file to use it in your Home Assistant.
 However in a few cases, but especially when the sensors are not standard (home made sensors, hacked sensors), you need to write some code. 
 
@@ -12,7 +12,7 @@ In this repository you'll find the code I wrote, how to build and install it and
 On the contrary, the hardware project is here
 [esphome-programming-a-very-cheap-power-meter](https://hackaday.io/project/197097-esphome-programming-a-very-cheap-power-meter)
 
-### Code explanation
+# Code explanation
 
 As recently (2023) the ESPhome Community suggested, the preferred way to develop a new "external component" (e.g. named "ct_power_clamp") is:
 
