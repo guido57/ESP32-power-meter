@@ -7,5 +7,5 @@ However in a few cases, but especially when the sensors are not standard (home m
 Here it comes the funny part, because the procedure I adopted to write this code can be followed not only for this but also for any other similar ESPHome project. 
 
 Here you'll find the code I wrote, how to build and install it and many other details. The hardware project is on 
-[](https://hackaday.io/project/197097-esphome-programming-a-very-cheap-power-meter){target="_blank"}
+[click](https://hackaday.io/project/197097-esphome-programming-a-very-cheap-power-meter)
 
