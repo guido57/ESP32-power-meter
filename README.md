@@ -21,7 +21,7 @@ external_components:
   - source: components
     components: [ct_power_clamp]
 ```
-for a complete .yaml file see [](https://github.com/guido57/ESP32-power-meter/blob/main/esphome/ct_power_clamp_test.yaml
+for a complete .yaml file see [ct_power_clamp_test.yaml](esphome/ct_power_clamp_test.yaml
 )
 
 ### Using the External Component
