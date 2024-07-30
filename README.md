@@ -53,7 +53,7 @@ In addition to knowing something about ESPHome, to build this project you need t
   * This ESPHome component into /home/you/ESP32-power-meter
 
 
-## Build and install the esphome firmware
+## Build and upload the ct_power_clamp_test.yaml to your hardware
 
 ### Activate the Python virtual environment
 
@@ -61,7 +61,7 @@ In addition to knowing something about ESPHome, to build this project you need t
 cd [the esphome directory, where you installed the ESPhome Command Line (see below) ]
 source venv/bin/activate
 ```
-### build and install the esphome firmware
+### build, install and run the esphome firmware
 ```
 cd esphome
 run esphome/ct_power_clamp_test.yaml
