@@ -1,0 +1,106 @@
+esphome:
+  name: "esp32-ct_power_clamp"
+  friendly_name: ESP32-CT-Power-Clamp
+
+esp32:
+  board: esp32dev
+  framework:
+    type: arduino
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+     key: "iPyz4GzKx/80YguhxY0bAZNj3H8velxh9Ls2DQQ+fjo="
+
+ota:
+  - platform: esphome
+
+wifi:
+  networks:
+  - ssid: !secret wifi_ssid
+    password: !secret wifi_password
+  - ssid: !secret wifi_ssid_sallynet
+    password: !secret wifi_password_sallynet
+  
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Esphome-Web-7B99D8"
+    password: "E8LkyX7IExso"
+
+captive_portal:
+
+external_components:
+  #- source: ../../../esphome/components
+  - source: components
+    components: [ct_power_clamp]
+  
+
+sensor:
+  
+  # CT Power Clamp configuration entry
+  - platform: ct_power_clamp
+    id: my_ct_power_clamp
+    update_interval: 10s
+    sample_duration: 6000ms
+    voltage_sensor:                    # the mains AC RMS voltage measured by an adc input through an AC transformer
+      sensor_id: adc_voltage_sensor
+      id: voltage
+      name: "Voltage"
+      filters:
+      - multiply: 1099
+      accuracy_decimals: 0
+    current1_sensor:                   # the AC RMS current measured by an adc input through a CT clamp
+      name: "Current1"                 
+      id: current1
+      sensor_id: adc_current1_sensor
+      accuracy_decimals: 3
+      filters:
+      - multiply: 40.72
+    current2_sensor:                   # another AC RMS current measured by an adc input through a CT clamp
+      sensor_id: adc_current2_sensor
+      name: "Current2"
+      accuracy_decimals: 3
+      filters:
+      - multiply: 40.72
+    power1_sensor:                     # the AC active power measured by the ct_power_clamp component using AC voltage and AC current1
+      name: "Power1"                   
+      id: power1
+      accuracy_decimals: 0
+      filters:
+      - multiply: 41017
+      
+    power2_sensor:                    # another AC active power measured by the ct_power_clamp component using AC voltage and AC current2
+      name: "Power2"
+      accuracy_decimals: 0
+      filters:
+       - multiply: 41017
+      
+  # the sensor template to calculate cos(phi)    
+  - platform: template
+    id: calculated_cos_fi_1
+    name: "Calculate cos(phi) 1"
+    accuracy_decimals: 2
+    filters:
+      - multiply: 41017
+    update_interval: 10s
+    lambda: |-
+      return id(power1).state / ( id(voltage).state * id(current1).state  );
+
+  # the adc sensor to sample the AC voltage
+  - platform: adc
+    pin: GPIO34
+    id: adc_voltage_sensor
+    
+  # the adc sensor to sample the AC current1  
+  - platform: adc
+    pin: GPIO35
+    id: adc_current1_sensor
+    
+  # the adc sensor to sample the AC current2
+  - platform: adc
+    pin: GPIO39 # GPIO39=SVN
+    id: adc_current2_sensor
+
