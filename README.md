@@ -14,7 +14,16 @@ On the contrary, the hardware project is here
 
 ### Code explanation
 
-As recently (2023) suggested by the ESPhome community the preferred way to use a new "External Component" is with the following syntax in your .yaml file:
+As recently (2023) suggested by the ESPhome community the preferred way to develop a new "external component" named for instance "ct_power_clamp" is:
+
+## Create the files
+
+* esphome/components/ct_power_clamp/ct_power_clamp.h
+* esphome/components/ct_power_clamp/ct_power_clamp.cpp 
+* esphome/components/ct_power_clamp/sensor.py
+* __init__.py
+
+## Use the following syntax in your .yaml file:
 
 ```
 external_components:
@@ -23,6 +32,19 @@ external_components:
 ```
 for a complete .yaml file see [ct_power_clamp_test.yaml](esphome/ct_power_clamp_test.yaml
 )
+
+## Launch the esphome command
+Activate the Python virtual environment
+```
+cd [the esphome directory]
+source venv/bin/activate
+```
+build and install the esphome firmware
+```
+cd esphome run esphome/ct_power_clamp_test.yaml
+```
+ 
+
 
 ### Using the External Component
 
