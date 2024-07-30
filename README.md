@@ -45,7 +45,7 @@ for the complete .yaml file see [ct_power_clamp_test.yaml](esphome/ct_power_clam
 ### Activate the Python virtual environment
 
 ```
-cd [the esphome directory]
+cd [the esphome directory, where you installed the ESPhome Command Line (see below) ]
 source venv/bin/activate
 ```
 ### build and install the esphome firmware
