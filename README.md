@@ -15,13 +15,14 @@ On the contrary, the hardware project is here
 ### Code explanation
 
 As recently (2023) suggested by the ESPhome community the preferred way to use a new "External Component" is with the following syntax in your .yaml file:
-'''
+
+```
 external_components:
   - source: components
     components: [ct_power_clamp]
-
-
-
+```
+for a complete .yaml file see [](https://github.com/guido57/ESP32-power-meter/blob/main/esphome/ct_power_clamp_test.yaml
+)
 
 ### Using the External Component
 
