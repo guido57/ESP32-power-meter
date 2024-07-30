@@ -1,3 +1,3 @@
 
 esphome/.esphome/build/*
-esphome/components/ct_power_clamp/secrets.yaml
+esphome/components/secrets.yaml
