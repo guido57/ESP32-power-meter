@@ -15,7 +15,7 @@ In this repository you'll find the code I wrote, how to build and install it and
 On the contrary, the hardware project is here
 [esphome-programming-a-very-cheap-power-meter](https://hackaday.io/project/197097-esphome-programming-a-very-cheap-power-meter)
 
-# Code explanation
+# Code files architecture
 
 As recently (2023) the ESPhome Community suggested, the preferred way to develop a new "external component" (e.g. named "ct_power_clamp") is:
 
@@ -40,6 +40,19 @@ external_components:
 for the complete .yaml file see [ct_power_clamp_test.yaml](esphome/ct_power_clamp_test.yaml
 )
 
+# Prepare the development environment
+
+In addition to knowing something about ESPHome, to build this project you need to:
+
+* install a local instance of [ESPHome Command Line](https://esphome.io/guides/installing_esphome#linux) (the development environment)
+* I strongly suggest to install [Visual Studio Code](https://code.visualstudio.com/) but I suppose you can also use your favorite code editor
+* if you don't have it yet, install a local instance of [Home Assistant](https://www.home-assistant.io/installation/) in a computer of your choice (I strongly suggest a [dedicated Raspberry PI](https://www.home-assistant.io/installation/#diy-with-raspberry-pi))
+* download this repository in a folder of your choice. Not to mix things, I only suggest you to avoid the directory where you installed the ESPHome Command Line.
+  For instance you could install:
+  * The ESPHome Command line into /home/you/esphome
+  * Your ESPHome component into /home/you/ESP32-power-meter
+
+
 ## Build and install the esphome firmware
 
 ### Activate the Python virtual environment
@@ -50,17 +63,10 @@ source venv/bin/activate
 ```
 ### build and install the esphome firmware
 ```
-cd esphome run esphome/ct_power_clamp_test.yaml
+cd esphome
+run esphome/ct_power_clamp_test.yaml
 ```
  
-# Prepare the development environment
-
-In addition to knowing something about ESPHome, to build this project you need to:
-
-* install a local instance of [ESPhome Command Line](https://esphome.io/guides/installing_esphome#linux) (the development environment)
-* I strongly suggest to install [Visual Studio Code](https://code.visualstudio.com/) but I suppose you can also use your favorite code editor
-* if you don't have it yet, install a local instance of [Home Assistant](https://www.home-assistant.io/installation/) in a computer of your choice (I strongly suggest a [dedicated Raspberry PI](https://www.home-assistant.io/installation/#diy-with-raspberry-pi))
-
 
 
  
