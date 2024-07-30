@@ -26,6 +26,8 @@ As recently (2023) the ESPhome Community suggested, the preferred way to develop
 * esphome/components/ct_power_clamp/sensor.py
 * __init__.py
 
+You'll find these files in this repository.
+
 ## Use the following syntax in your .yaml file:
 
 ```
@@ -35,7 +37,7 @@ external_components:
     components: [ct_power_clamp]
 ...
 ```
-for a complete .yaml file see [ct_power_clamp_test.yaml](esphome/ct_power_clamp_test.yaml
+for the complete .yaml file see [ct_power_clamp_test.yaml](esphome/ct_power_clamp_test.yaml
 )
 
 ## Build and install the esphome firmware
