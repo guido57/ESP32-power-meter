@@ -58,7 +58,7 @@ cd esphome run esphome/ct_power_clamp_test.yaml
 In addition to knowing something about ESPHome, to build this project you need to:
 
 * install a local instance of [ESPhome Command Line](https://esphome.io/guides/installing_esphome#linux) (the development environment)
-* I strongly suggest to install [Visual Studio Code](https://code.visualstudio.com/) but I suppose you cna also use your code editor of choice
+* I strongly suggest to install [Visual Studio Code](https://code.visualstudio.com/) but I suppose you can also use your favorite code editor
 * if you don't have it yet, install a local instance of [Home Assistant](https://www.home-assistant.io/installation/) in a computer of your choice (I strongly suggest a [dedicated Raspberry PI](https://www.home-assistant.io/installation/#diy-with-raspberry-pi))
 
 
