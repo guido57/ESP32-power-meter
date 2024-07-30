@@ -4,7 +4,7 @@ A cheap AC power meter integrated with ESPhome
 
 # Overview
 
-## This software is completely based on [ESPHome](https://esphome.io/) and [Home Assistant](https://www.home-assistant.io/). In the unlikely case you don't know what they are, i strongly suggest to follow the links and study them a little.
+## This software is completely based on [ESPHome](https://esphome.io/) and [Home Assistant](https://www.home-assistant.io/). In the unlikely case you don't know what they are, I strongly suggest to follow the links and study them a little.
 
 For most devices/sensors connected to ESP32/ESP8266, the ESPHome integration is already available. In that case, you only need to write the proper .yaml file to use it in your Home Assistant.
 However in a few cases, but especially when the sensors are not standard (home made sensors, hacked sensors), you need to write some code. 
@@ -53,10 +53,12 @@ cd esphome run esphome/ct_power_clamp_test.yaml
  
 # Prepare the development environment
 
-PREREQUISITES
 In addition to knowing something about ESPHome, to build this project you need to:
 
-install a local instance of ESPhome Command Line (the development environment)
-install Visual Studio Code or use your code editor of choice
-install a local instance of Home Assistant in a computer of your choice (I strongly suggest a dedicated Raspberry PI)
+* install a local instance of [ESPhome Command Line](https://esphome.io/guides/installing_esphome#linux) (the development environment)
+* I strongly suggest to install [Visual Studio Code](https://code.visualstudio.com/) but I suppose you cna also use your code editor of choice
+* if you don't have it yet, install a local instance of [Home Assistant](https://www.home-assistant.io/installation/) in a computer of your choice (I strongly suggest a [dedicated Raspberry PI](https://www.home-assistant.io/installation/#diy-with-raspberry-pi))
 
+
+
+ 
