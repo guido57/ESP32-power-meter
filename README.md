@@ -1,4 +1,4 @@
-# A cheap AC power/current/voltage meter integrated with ESPHome
+# A cheap AC Power Meter integrated with ESPHome
 ![](https://cdn.hackaday.io/images/6278781722196728543.png)
 
 # Overview
