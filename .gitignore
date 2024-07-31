@@ -2,3 +2,4 @@
 esphome/.esphome/build/*
 esphome/secrets.yaml
 esphome/.esphome/*
+*.pyc
