@@ -54,6 +54,7 @@ Not to mix things, I only suggest you to avoid the same directory where you inst
   For instance you could install:
   * The ESPHome Command line into /home/you/esphome
   * This ESPHome component into /home/you/ESP32-power-meter
+    
 Therefore:
 ```
 cd /home/you/
