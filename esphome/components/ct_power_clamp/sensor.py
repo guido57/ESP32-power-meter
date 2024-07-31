@@ -4,8 +4,6 @@ from esphome.components import  sensor, adc
 from esphome.const import (
     CONF_ID, 
     CONF_NAME, 
-    CONF_VOLTAGE, 
-    CONF_CURRENT, 
     CONF_UPDATE_INTERVAL, 
     CONF_SENSOR_ID, 
     UNIT_VOLT, 
