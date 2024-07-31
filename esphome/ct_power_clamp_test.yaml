@@ -32,11 +32,18 @@ wifi:
 
 captive_portal:
 
+# use this if your external component is in a local directory (e.g. components)
 external_components:
-  #- source: ../../../esphome/components
   - source: components
     components: [ct_power_clamp]
-  
+
+# use this if your external component is on Github
+#external_components:
+#  - source:
+#      type: git
+#      url: https://github.com/guido57/ESP32-power-meter
+#    components: [ct_power_clamp]
+ 
 
 sensor:
   
@@ -44,7 +51,7 @@ sensor:
   - platform: ct_power_clamp
     id: my_ct_power_clamp
     update_interval: 10s
-    sample_duration: 6000ms
+    sample_duration: 6000ms            # must be lower than update_interval
     voltage_sensor:                    # the mains AC RMS voltage measured by an adc input through an AC transformer
       sensor_id: adc_voltage_sensor
       id: voltage
