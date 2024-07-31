@@ -46,11 +46,20 @@ In addition to knowing something about ESPHome, to build this project you need t
 
 * install a local instance of [ESPHome Command Line](https://esphome.io/guides/installing_esphome#linux) (the development environment)
 * I strongly suggest to install [Visual Studio Code](https://code.visualstudio.com/) but I suppose you can also use your favorite code editor
-* if you don't have it yet, install a local instance of [Home Assistant](https://www.home-assistant.io/installation/) in a computer of your choice (I strongly suggest a [dedicated Raspberry PI](https://www.home-assistant.io/installation/#diy-with-raspberry-pi))
-* download this repository in a folder of your choice. Not to mix things, I only suggest you to avoid the directory where you installed the ESPHome Command Line.
+* if you don't have it yet, install a local instance of [Home Assistant](https://www.home-assistant.io/installation/) in a computer of your choice (I strongly suggest a [dedicated Raspberry PI](https://www.home-assistant.io/installation/#diy-with-raspberry-pi)), It is not mandatory during the development, but you'll need it to show and monitor your measurements.
+* download this repository in a folder of your choice (see below)
+
+## Download this repository
+
+Not to mix things, I only suggest you to avoid the same directory where you installed the ESPHome Command Line.
   For instance you could install:
   * The ESPHome Command line into /home/you/esphome
   * This ESPHome component into /home/you/ESP32-power-meter
+Therefore:
+```
+cd /home/you/
+git clone https://github.com/guido57/ESP32-power-meter
+cd ESP32-power-meter
 
 
 ## Build and upload the ct_power_clamp_test.yaml to your hardware
@@ -62,9 +71,14 @@ cd [the esphome directory, where you installed the ESPhome Command Line (see bel
 source venv/bin/activate
 ```
 ### build, install and run the esphome firmware
+
+Connect your ESP32 hardware to your PC via serial port.
+After the first upload, you could also upload it via WiFi (OTA).
+Then simply run the yaml with esphome
+
 ```
 cd esphome
-run esphome/ct_power_clamp_test.yaml
+esphome run esphome/ct_power_clamp_test.yaml
 ```
  
 
