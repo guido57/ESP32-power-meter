@@ -1,4 +1,4 @@
-# ESP32 Power Meter - A cheap AC power meter integrated with ESPhome
+# A cheap AC power/current/voltage meter integrated with ESPHome
 ![](https://cdn.hackaday.io/images/6278781722196728543.png)
 
 # Overview
