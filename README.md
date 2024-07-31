@@ -77,7 +77,7 @@ After the first upload, you could also upload it via WiFi (OTA).
 Then simply run the yaml with esphome
 
 ```
-cd esphome
+cd /home/you/ESP32-power-meter
 esphome run esphome/ct_power_clamp_test.yaml
 ```
  
