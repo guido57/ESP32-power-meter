@@ -59,7 +59,7 @@ Therefore:
 cd /home/you/
 git clone https://github.com/guido57/ESP32-power-meter
 cd ESP32-power-meter
-
+```
 
 ## Build and upload the ct_power_clamp_test.yaml to your hardware
 
